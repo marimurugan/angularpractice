@@ -1,8 +1,8 @@
 jobs:
-  - name: job-hello-world
+  - name: job-upload-to-s3
     public: true
     plan:
-      - task: hello-world
+      - task: upload-to-s3
         config:
           platform: linux
           image_resource:
@@ -10,4 +10,4 @@ jobs:
             source: {repository: busybox}
           run:
             path: echo
-            args: [Hello Mari. the pipeline updated]
+            args: [This is a first try from git]
